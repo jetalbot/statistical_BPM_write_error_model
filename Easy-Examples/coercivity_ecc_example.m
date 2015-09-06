@@ -1,5 +1,7 @@
-%% Example of calculating energy barrier for ecc 
-% This script demonstrates the basic function hc_search_ecc.m function to function coercivity in a ECC case. The % % % % method given here accounts of a demagnetising field of the object and requires the demagfactor.m function; this can % be left out and the method is shown below.
+%% Example of calculating coercivity for ecc type structure
+% This script demonstrates the basic function hc_search_ecc.m function to function coercivity in a ECC case. 
+% the method given here accounts of a demagnetising field of the object and requires the demagfactor.m function; 
+% this can be left out and the method is shown below.
 
 
 clear all;
