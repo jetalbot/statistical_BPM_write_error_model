@@ -1,9 +1,8 @@
 %% Energy barrier calculation for single layer
 % Calculates the energy barrier of a single layer island using the method
 % of calculation given by Kalezhi et al[1]. Energy of coupled composite
-% islands in an applied magnetic field are calculated here using a two-spin
-% approximation that assumes that the hard and soft layers of the islands
-% are uniformly magnetised and that the change in magnetisation angle
+% islands in an applied magnetic field are calculated here assumes that the island is
+% uniformly magnetised and that the change in magnetisation angle
 % occurs at the interface.
 % For a single layer the energy barrier can be expressed as:
 %
