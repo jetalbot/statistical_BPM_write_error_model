@@ -254,20 +254,8 @@ kb = 1.3806503;  %*1e-23 Boltzmann constant
 % Here attempt frequency is multiplied by write attempts, since the
 % formular predicts this
 
-write_attempts = 1; %10^4; % write attempts on target islands
-attfreq = 1000e9; %100; %1e3;  %100*1e9; %24.3954; % attempt frequency, fo = 1000*1e9, in Hz. 
-
-% For applied field = 0, Brown, PR, 130, 5, 1963 (also in PRB, 78,064430
-% (2008)) predicts, in the high energy barrier approximation, fo =
-% alpha*gamma*(muo*hk)*(k1*v/(pi*kb*T))^(1/2)/(1 + alpha^2) gamma =
-% 1.760859770*1e11 rad^-1 s^-1 T^-1, choosing alpha =0.1 In this case, fo =
-% alpha*gamma*muo*hk*sqrt(k1*vol*1e-27/(pi*kb*temp*1e-23))/(1 +alpha^2)
-% which gives 6.193970e+010 Hz = 61.9397 GHz
-
-% gamma = 1.760859770*1e11;
-% alpha = 0.1; %damping parameter
-% attfreq = alpha*gamma*muo*hk*sqrt(k1*vol*1e-27/(pi*kb*temp*1e-23))/(1 +alpha^2);
-% attfreq = attfreq/1e9; %in GHz
+write_attempts = 1; % write attempts on target islands
+attfreq = 1000e9; % attempt frequency, fo = 1000*1e9, in Hz. 
 
 thermal_prop = [temp kb attfreq*write_attempts]; % multiply attempt frequency by write attempts
 
@@ -356,18 +344,6 @@ s1 = 1; s2 = 1; % upper and lower limit of integration same
 % s1 = mean_par - n1*sigma_par;  % upper limit of intergration
 % s2 = mean_par + n2*sigma_par;  % lower limit of intergration
 
-% ISLAND PATTERN
-% The pattern of surrounding islands is varied, all variations calculated
-% in island_field folder
-
-% varparameter = 5;
-% [mean_para, sigma_par]= dipolefield (a, t, m_h)
-% % sigma_par = 0.075;
-% mean_par = 0; 
-% n1 = 10;    % number determining upper limit of integration, see x1
-% n2 = 10;    % number determining lower limit of integration, see x2
-% s1 = mean_par - n1*sigma_par;  % upper limit of intergration
-% s2 = mean_par + n2*sigma_par;  % lower limit of intergration
 
 
 var_prop = [mean_par sigma_par varparameter jitter_down_or_cross w dist_type s1 s2];
@@ -454,36 +430,6 @@ interp_prop = [interp_demag interp_field];
 % OBTAINING HEAD DATA DATA EXTERNAL 
 % Obtaining head data from file instead of from within this .m file
 
-% hx_av_2d_data = load('.\karlqvist_single_pole_reflected_in _soft_underlayer\karlqvist_hx_data.m');
-% hy_av_2d_data = load('.\karlqvist_single_pole_reflected_in _soft_underlayer\karlqvist_hy_data.m');
-% hz_av_2d_data = load('.\karlqvist_single_pole_reflected_in _soft_underlayer\karlqvist_hz_data.m');
- 
-% %hard layer data sets
-% hx_av_2d_h_data = load('.\karlqvist_single_pole_reflected_in _soft_underlayer\karlqvist_hx_data.m'); % set these to single layer ones if working with single layer islands
-% hy_av_2d_h_data = load('.\karlqvist_single_pole_reflected_in _soft_underlayer\karlqvist_hy_data.m');
-% hz_av_2d_h_data = load('.\karlqvist_single_pole_reflected_in _soft_underlayer\karlqvist_hz_data.m');
- 
-% %soft layer data sets
-% hx_av_2d_s_data = load('.\karlqvist_single_pole_reflected_in _soft_underlayer\karlqvist_hx_data.m');
-% hy_av_2d_s_data = load('.\karlqvist_single_pole_reflected_in _soft_underlayer\karlqvist_hy_data.m');
-% hz_av_2d_s_data = load('.\karlqvist_single_pole_reflected_in _soft_underlayer\karlqvist_hz_data.m');
-% 
-% y_data = load('.\karlqvist_single_pole_reflected_in _soft_underlayer\karlqvist_y_data.m');
-
-% hx_av_2d_data = load('.\bpmheadfield_11x22_x901y901\bpm11x22_hx_av_2d_data.m');
-% hy_av_2d_data = load('.\bpmheadfield_11x22_x901y901\bpm11x22_hy_av_2d_data.m');
-% hz_av_2d_data = load('.\bpmheadfield_11x22_x901y901\bpm11x22_hz_av_2d_data.m');
- 
-% hx_av_2d_h_data = load('.\bpmheadfield_11x22_x901y901\bpm11x22_hx_av_2d_h_data.m');
-% hy_av_2d_h_data = load('.\bpmheadfield_11x22_x901y901\bpm11x22_hy_av_2d_h_data.m');
-% hz_av_2d_h_data = load('.\bpmheadfield_11x22_x901y901\bpm11x22_hz_av_2d_h_data.m');
- 
-% hx_av_2d_s_data = load('.\bpmheadfield_11x22_x901y901\bpm11x22_hx_av_2d_s_data.m');
-% hy_av_2d_s_data = load('.\bpmheadfield_11x22_x901y901\bpm11x22_hy_av_2d_s_data.m');
-% hz_av_2d_s_data = load('.\bpmheadfield_11x22_x901y901\bpm11x22_hz_av_2d_s_data.m');
- 
-% y_data = load('.\bpmheadfield_11x22_x901y901\bpm11x22_y_data.m');
-
 hx_av_2d_data = load('.\bpmheadfield_11x22(600x600)\bpm11x22_hx_av_2d_data.m');
 hy_av_2d_data = load('.\bpmheadfield_11x22(600x600)\bpm11x22_hy_av_2d_data.m');
 hz_av_2d_data = load('.\bpmheadfield_11x22(600x600)\bpm11x22_hz_av_2d_data.m');
@@ -515,10 +461,10 @@ y_data = load('.\bpmheadfield_11x22(600x600)\bpm11x22_y_data.m');
 % Uncomment following lines for adaptive step size
 
 step_cnd = 2;
-delta_xmin =0.0001; %0.005; %0.004; % 0.005; % 0.0015; %0.0015; %0.015; % smallest step size
-delta_xmax =0.01; %0.1; %0.04; % 0.01; 64*delta_xmin; % largest step size
+delta_xmin =0.0001; % % smallest step size
+delta_xmax =0.01; %% largest step size
 delta_x = delta_xmax;
-min_switch_prob = 1e-8; %1e-12;% minimum switching probability
+min_switch_prob = 1e-8; %minimum switching probability
 
 switch_prob_low = 1e-8;
 switch_prob_high = 1e-1;
