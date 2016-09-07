@@ -17,6 +17,16 @@ The [wiki](https://github.com/jetalbot/statistical_BPM_write_error_model/wiki) g
 
 The statistical BPM write model and its associated components are free to use. We ask that any research published using this model cites one of the following papers:
 
+[1] J. Kalezhi, B. D Belle, and J. J Miles. Dependence of Write-Window on Write Error Rates in Bit Patterned Media. Magnetics, IEEE Transactions on, 46(10):3752–3759, 2010.
+
+[2] J. Kalezhi, J.J. Miles, and B.D. Belle. Dependence of Switching Fields on Island Shape in Bit Patterned Media. Magnetics, IEEE Transactions on, 45(10):3531– 3534, 2009.
+
+[3] J. Kalezhi, S. J. Greaves, Y. Kanai, M. E. Schabes, M. Grobis, and J. J. Miles. A statistical model of write-errors in bit patterned media. Journal of Applied Physics, 111(5):053926, 2012.
+
+[4] J. E. Talbot, J. Kalezhi, C. Barton, G. Heldt and J. Miles, "Write Errors in Bit-Patterned Media: The Importance of Parameter Distribution Tails," in IEEE Transactions on Magnetics, vol. 50, no. 8, pp. 1-7, Aug. 2014.
+
+[5] J. E. Talbot, J. Kalezhi and J. Miles, "Determining the Anisotropy of Bit-Patterned Media for Optimal Performance," in IEEE Transactions on Magnetics, vol. 51, no. 11, pp. 1-4, Nov. 2015.
+
 *
 *
 *
