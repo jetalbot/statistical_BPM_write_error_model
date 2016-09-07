@@ -11,7 +11,7 @@ The basic routines for calculating demagnetising factors, energy barriers and co
 
 ##Further information#
 
-The [wiki](https://github.com/jetalbot/statistical_BPM_write_error_model/wiki) gives details on how the functions of the model work, how to use the function seperately and how to combine the functions.
+The [wiki](https://github.com/jetalbot/statistical_BPM_write_error_model/wiki) gives details on how the functions of the model work, how to use the functions seperately and how to combine the functions.
 
 ##Usage#
 
