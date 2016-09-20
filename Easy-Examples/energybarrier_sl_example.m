@@ -48,7 +48,7 @@ ms = 700e3; % saturation magnetisation in A/m:  700emu/cc
 k =7.80e5; % in J/m^3 muo*ms*hk/2;  %  crystalline anisotropy constant in J/m^3: since hk = 2*k1./(muo*ms) => k1 = muo*ms*hk/2
 
 %calculate demagnetising factors  
-[nxx nyy nzz] = demagfactors(a, b, t_tot, alpha, islandgeo, demag_tol); 
+%[nxx nyy nzz] = demagfactors(a, b, t_tot, alpha, islandgeo, demag_tol); 
 
 %% Specify uniform applied field magnitude and angles 
 % Specify an applied field, this can be expressed as an array of values.
