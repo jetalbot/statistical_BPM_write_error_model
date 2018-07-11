@@ -1,4 +1,4 @@
-# Bit Patterned Media Write Model#
+# Bit Patterned Media Write Model
 
 A statistical write error model for exchange coupled composite and single layer bit patterned media (BPM) islands. 
 
